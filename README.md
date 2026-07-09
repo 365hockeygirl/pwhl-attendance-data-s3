@@ -2,6 +2,7 @@
 
 ✨ SUBSCRIBE TO [365 HOCKEY GIRL NEWSLETTER](https://365hockeygirl.beehiiv.com/subscribe) TO READ THE WRITE UP! ✨
 
+## Graphs 📊
 Graphs can be found in [/graphs](https://github.com/365hockeygirl/pwhl-attendance-data-s3/tree/main/graphs)
 
 <img width="700"  alt="pwhl average attendance vs capacity" src="https://github.com/user-attachments/assets/0111e7cb-97aa-4bbc-82d7-bed283bcd332" />
@@ -9,15 +10,15 @@ Graphs can be found in [/graphs](https://github.com/365hockeygirl/pwhl-attendanc
 <img width="700" alt="CPA attendance" src="https://github.com/user-attachments/assets/02b5e30b-b1dd-45b9-8cb9-2717131a1512" />
 <img width="700" alt="Prudential Center Attendance" src="https://github.com/user-attachments/assets/32118fad-ee59-4552-95cc-8b86d23995de" />
 
-
+## Dataset Generation 💻
 PWHL Season 3 Attendance data generated via HockeyTech/LeagueStat API (lscluster.hockeytech.com)
 See PWHL data reference: https://github.com/IsabelleLefebvre97/PWHL-Data-Reference
 
-The Jupyter notebook used to fetch the data is in [/code_to_fetch_data](https://github.com/365hockeygirl/pwhl-attendance-data-s3/tree/main/code_to_fetch_data) or view it in [colab](https://colab.research.google.com/drive/1ei6yWve1BrN1hfDWKB1r9Nsrn1wV-bzP?authuser=1#scrollTo=yfuEQlaYh0LO)
+The Jupyter notebook used to fetch the data is in [/code_to_fetch_data](https://github.com/365hockeygirl/pwhl-attendance-data-s3/tree/main/code_to_fetch_data) 
 
+## Dataset
 The data generated from the notebook is in [/data](https://github.com/365hockeygirl/pwhl-attendance-data-s3/tree/main/data)
-- [average_attendance_by_home_team](https://github.com/365hockeygirl/pwhl-attendance-data-s3/blob/main/data/average_attendance_by_home_team.csv) is the average attendances by home team (regardless of venue, including takeover games). Note that this mostly matches the [official PWHL attendance report](https://lscluster.hockeytech.com/media/pwhl/pwhl/index.php?format=HTML&season_id=8&step=4&sub=15) but my Boston Fleet number is 6560; the official league number is 6,531; I'm not sure where the discrepancy is coming from 😭 EDIT: I fixed this cuz i was missing a few games; data has been updated
-- [primary_venue_average_attendance_by_location](https://github.com/365hockeygirl/pwhl-attendance-data-s3/blob/main/data/primary_venue_average_attendance_by_location.csv) is the average attendances by primary home venue
-- [primary_venue_attendance_data](https://github.com/365hockeygirl/pwhl-attendance-data-s3/blob/main/data/primary_venue_attendance_data.csv) is a table of all S3 games played at a primary home venue. This table was used to generate `primary_venue_average_attendance_by_location`
-- [special_venue_attendance_data](https://github.com/365hockeygirl/pwhl-attendance-data-s3/blob/main/data/primary_venue_average_attendance_by_location.csv) is a table of all games not played at a primary home venue; this includes takeover games and special games like Fleet games at Agganis or the MSG game
-- [pwhl_s3_attendance_data](https://github.com/365hockeygirl/pwhl-attendance-data-s3/blob/main/data/pwhl_s3_attendance_data.csv) is a table of all S3 games but note that it's not in chronological order because I appended the non primary venue games and then the primary venue games tables together. I used this to make the `average_attendance_by_home_team` table
+- 📁 S3 Regular season attendance: lists attendances for every regular season game. Also contains separate datasets for just primary venues vs "special" venues (takeover games, one-off games)
+- 📁 S3 regular season average attendances: Average attendances based on home team or primary venue
+- 📁 S3 Playoffs attendances: lists attendances for playoffs, also gives a combined dataset for all games including regular season and playoffs
+- 📁 arena characteristics: arena capacities

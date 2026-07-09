@@ -1,5 +1,7 @@
 # PWHL Attendance Data Season 3
 
+✨ SUBSCRIBE TO [365 HOCKEY GIRL NEWSLETTER](https://365hockeygirl.beehiiv.com/subscribe) TO READ THE WRITE UP! ✨
+
 PWHL Season 3 Attendance data generated via HockeyTech/LeagueStat API (lscluster.hockeytech.com)
 See PWHL data reference: https://github.com/IsabelleLefebvre97/PWHL-Data-Reference
 

@@ -2,7 +2,12 @@
 
 ✨ SUBSCRIBE TO [365 HOCKEY GIRL NEWSLETTER](https://365hockeygirl.beehiiv.com/subscribe) TO READ THE WRITE UP! ✨
 
-<img width="1389" height="690" alt="PWHL average attendances and capacity" src="https://github.com/user-attachments/assets/0d065f7a-4b82-4805-af1e-17bb2b832f7b" />
+Graphs can be found in [/graphs](https://github.com/365hockeygirl/pwhl-attendance-data-s3/tree/main/graphs)
+
+<img width="700"  alt="pwhl average attendance vs capacity" src="https://github.com/user-attachments/assets/0111e7cb-97aa-4bbc-82d7-bed283bcd332" />
+<img width="700" alt="tsongas center attendance" src="https://github.com/user-attachments/assets/b472a58f-7181-4aac-bcf2-a1c7008dc2cc" />
+<img width="700" alt="CPA attendance" src="https://github.com/user-attachments/assets/02b5e30b-b1dd-45b9-8cb9-2717131a1512" />
+<img width="700" alt="Prudential Center Attendance" src="https://github.com/user-attachments/assets/32118fad-ee59-4552-95cc-8b86d23995de" />
 
 
 PWHL Season 3 Attendance data generated via HockeyTech/LeagueStat API (lscluster.hockeytech.com)

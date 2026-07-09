@@ -5,7 +5,7 @@
 PWHL Season 3 Attendance data generated via HockeyTech/LeagueStat API (lscluster.hockeytech.com)
 See PWHL data reference: https://github.com/IsabelleLefebvre97/PWHL-Data-Reference
 
-The Jupyter notebook used to fetch the data is in [/code_to_fetch_data](https://github.com/365hockeygirl/pwhl-attendance-data-s3/tree/main/code_to_fetch_data)
+The Jupyter notebook used to fetch the data is in [/code_to_fetch_data](https://github.com/365hockeygirl/pwhl-attendance-data-s3/tree/main/code_to_fetch_data) or view it in [colab](https://colab.research.google.com/drive/1ei6yWve1BrN1hfDWKB1r9Nsrn1wV-bzP?authuser=1#scrollTo=yfuEQlaYh0LO)
 
 The data generated from the notebook is in [/data](https://github.com/365hockeygirl/pwhl-attendance-data-s3/tree/main/data)
 - [average_attendance_by_home_team](https://github.com/365hockeygirl/pwhl-attendance-data-s3/blob/main/data/average_attendance_by_home_team.csv) is the average attendances by home team (regardless of venue, including takeover games). Note that this mostly matches the [official PWHL attendance report](https://lscluster.hockeytech.com/media/pwhl/pwhl/index.php?format=HTML&season_id=8&step=4&sub=15) but my Boston Fleet number is 6560; the official league number is 6,531; I'm not sure where the discrepancy is coming from 😭

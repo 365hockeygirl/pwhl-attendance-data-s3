@@ -2,6 +2,9 @@
 
 ✨ SUBSCRIBE TO [365 HOCKEY GIRL NEWSLETTER](https://365hockeygirl.beehiiv.com/subscribe) TO READ THE WRITE UP! ✨
 
+<img width="1389" height="690" alt="PWHL average attendances and capacity" src="https://github.com/user-attachments/assets/0d065f7a-4b82-4805-af1e-17bb2b832f7b" />
+
+
 PWHL Season 3 Attendance data generated via HockeyTech/LeagueStat API (lscluster.hockeytech.com)
 See PWHL data reference: https://github.com/IsabelleLefebvre97/PWHL-Data-Reference
 

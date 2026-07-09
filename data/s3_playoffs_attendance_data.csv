@@ -1,0 +1,14 @@
+,id,season_id,home_team,visiting_team,game_number,attendance,location,date_played,home_team_name,visiting_team_name,location_name
+0,338,9,1,5,1,4285,3,2026-04-30,Boston Fleet,Ottawa Charge,Tsongas Center
+1,339,9,1,5,3,6017,3,2026-05-02,Boston Fleet,Ottawa Charge,Tsongas Center
+2,340,9,3,2,2,9364,8,2026-05-02,Montréal Victoire,Minnesota Frost,Place Bell
+3,341,9,3,2,4,7530,8,2026-05-05,Montréal Victoire,Minnesota Frost,Place Bell
+4,342,9,2,3,6,6516,29,2026-05-07,Minnesota Frost,Montréal Victoire,Grand Casino Arena
+5,343,9,5,1,5,13112,20,2026-05-08,Ottawa Charge,Boston Fleet,Canadian Tire Centre
+6,344,9,5,1,7,11297,20,2026-05-10,Ottawa Charge,Boston Fleet,Canadian Tire Centre
+7,345,9,2,3,8,5312,29,2026-05-08,Minnesota Frost,Montréal Victoire,Grand Casino Arena
+8,347,9,3,2,10,6104,8,2026-05-12,Montréal Victoire,Minnesota Frost,Place Bell
+9,348,9,5,3,13,16894,20,2026-05-18,Ottawa Charge,Montréal Victoire,Canadian Tire Centre
+10,349,9,5,3,14,12362,20,2026-05-20,Ottawa Charge,Montréal Victoire,Canadian Tire Centre
+11,350,9,3,5,11,5062,8,2026-05-14,Montréal Victoire,Ottawa Charge,Place Bell
+12,351,9,3,5,12,9232,8,2026-05-16,Montréal Victoire,Ottawa Charge,Place Bell

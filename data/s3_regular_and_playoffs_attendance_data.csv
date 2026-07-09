@@ -1,0 +1,134 @@
+,id,season_id,home_team,visiting_team,game_number,attendance,location,date_played,home_team_name,visiting_team_name,location_name
+0,210,8,2,6,1,9138,29,2025-11-21,Minnesota Frost,Toronto Sceptres,Grand Casino Arena
+1,211,8,9,8,2,14958,30,2025-11-21,Vancouver Goldeneyes,Seattle Torrent,Pacific Coliseum
+2,212,8,5,4,3,7371,1,2025-11-22,Ottawa Charge,New York Sirens,TD Place
+3,213,8,1,3,4,5166,3,2025-11-23,Boston Fleet,Montréal Victoire,Tsongas Center
+4,214,8,3,4,5,8392,8,2025-11-25,Montréal Victoire,New York Sirens,Place Bell
+5,215,8,5,9,6,5507,1,2025-11-26,Ottawa Charge,Vancouver Goldeneyes,TD Place
+6,216,8,8,2,7,16014,21,2025-11-28,Seattle Torrent,Minnesota Frost,Climate Pledge Arena
+7,217,8,4,9,8,3517,16,2025-11-29,New York Sirens,Vancouver Goldeneyes,Prudential Center
+8,218,8,6,1,9,8277,17,2025-11-29,Toronto Sceptres,Boston Fleet,Coca-Cola Coliseum
+9,219,8,5,2,10,5174,1,2025-12-02,Ottawa Charge,Minnesota Frost,TD Place
+10,220,8,1,9,11,3516,28,2025-12-03,Boston Fleet,Vancouver Goldeneyes,Agganis Arena
+11,221,8,8,4,12,8622,21,2025-12-03,Seattle Torrent,New York Sirens,Climate Pledge Arena
+12,222,8,6,5,13,7715,17,2025-12-04,Toronto Sceptres,Ottawa Charge,Coca-Cola Coliseum
+13,223,8,9,4,14,9502,30,2025-12-06,Vancouver Goldeneyes,New York Sirens,Pacific Coliseum
+14,224,8,3,6,15,8113,8,2025-12-07,Montréal Victoire,Toronto Sceptres,Place Bell
+15,225,8,1,2,16,5338,28,2025-12-07,Boston Fleet,Minnesota Frost,Agganis Arena
+16,226,8,9,5,17,9250,30,2025-12-16,Vancouver Goldeneyes,Ottawa Charge,Pacific Coliseum
+17,227,8,6,3,18,10438,32,2025-12-17,Toronto Sceptres,Montréal Victoire,
+18,228,8,4,1,19,1884,16,2025-12-17,New York Sirens,Boston Fleet,Prudential Center
+19,229,8,8,5,20,9389,21,2025-12-17,Seattle Torrent,Ottawa Charge,Climate Pledge Arena
+20,230,8,2,1,21,7216,29,2025-12-19,Minnesota Frost,Boston Fleet,Grand Casino Arena
+21,231,8,9,3,22,12127,30,2025-12-20,Vancouver Goldeneyes,Montréal Victoire,Pacific Coliseum
+22,232,8,4,6,23,3517,16,2025-12-21,New York Sirens,Toronto Sceptres,Prudential Center
+23,233,8,2,5,24,7238,33,2025-12-21,Minnesota Frost,Ottawa Charge,
+24,234,8,8,1,25,11023,21,2025-12-21,Seattle Torrent,Boston Fleet,Climate Pledge Arena
+25,235,8,6,5,26,8108,17,2025-12-23,Toronto Sceptres,Ottawa Charge,Coca-Cola Coliseum
+26,236,8,8,3,27,10276,21,2025-12-23,Seattle Torrent,Montréal Victoire,Climate Pledge Arena
+27,237,8,5,1,28,8497,1,2025-12-27,Ottawa Charge,Boston Fleet,TD Place
+28,238,8,3,6,29,18107,15,2025-12-27,Montréal Victoire,Toronto Sceptres,
+29,239,8,9,2,30,10264,27,2025-12-27,Vancouver Goldeneyes,Minnesota Frost,
+30,240,8,4,8,31,8514,34,2025-12-28,New York Sirens,Seattle Torrent,
+31,241,8,6,2,32,8318,17,2025-12-30,Toronto Sceptres,Minnesota Frost,Coca-Cola Coliseum
+32,242,8,4,9,33,2735,16,2025-12-31,New York Sirens,Vancouver Goldeneyes,Prudential Center
+33,243,8,4,3,34,3513,16,2026-01-02,New York Sirens,Montréal Victoire,Prudential Center
+34,244,8,5,2,35,8235,1,2026-01-03,Ottawa Charge,Minnesota Frost,TD Place
+35,245,8,6,8,36,16012,35,2026-01-03,Toronto Sceptres,Seattle Torrent,
+36,246,8,1,9,37,9624,9,2026-01-03,Boston Fleet,Vancouver Goldeneyes,
+37,247,8,3,2,38,10172,8,2026-01-04,Montréal Victoire,Minnesota Frost,Place Bell
+38,248,8,6,4,39,7924,17,2026-01-06,Toronto Sceptres,New York Sirens,Coca-Cola Coliseum
+39,249,8,5,9,40,7889,1,2026-01-09,Ottawa Charge,Vancouver Goldeneyes,TD Place
+40,250,8,1,8,41,6003,28,2026-01-07,Boston Fleet,Seattle Torrent,Agganis Arena
+41,251,8,1,5,42,10452,32,2026-01-11,Boston Fleet,Ottawa Charge,
+42,252,8,2,8,43,9787,29,2026-01-11,Minnesota Frost,Seattle Torrent,Grand Casino Arena
+43,253,8,3,9,44,14624,19,2026-01-11,Montréal Victoire,Vancouver Goldeneyes,
+44,254,8,3,5,45,7408,8,2026-01-13,Montréal Victoire,Ottawa Charge,Place Bell
+45,255,8,1,6,46,3372,3,2026-01-14,Boston Fleet,Toronto Sceptres,Tsongas Center
+46,256,8,4,2,47,4244,16,2026-01-16,New York Sirens,Minnesota Frost,Prudential Center
+47,257,8,6,9,48,17856,13,2026-01-17,Toronto Sceptres,Vancouver Goldeneyes,
+48,258,8,4,3,49,17228,36,2026-01-18,New York Sirens,Montréal Victoire,
+49,259,8,8,1,50,12774,21,2026-01-18,Seattle Torrent,Boston Fleet,Climate Pledge Arena
+50,260,8,4,5,51,2759,16,2026-01-20,New York Sirens,Ottawa Charge,Prudential Center
+51,261,8,8,6,52,10160,21,2026-01-20,Seattle Torrent,Toronto Sceptres,Climate Pledge Arena
+52,262,8,2,3,53,6113,29,2026-01-21,Minnesota Frost,Montréal Victoire,Grand Casino Arena
+53,263,8,9,6,54,14006,30,2026-01-22,Vancouver Goldeneyes,Toronto Sceptres,Pacific Coliseum
+54,264,8,3,5,55,10172,8,2026-01-24,Montréal Victoire,Ottawa Charge,Place Bell
+55,265,8,2,4,56,7752,29,2026-01-25,Minnesota Frost,New York Sirens,Grand Casino Arena
+56,266,8,8,9,57,11612,23,2026-01-25,Seattle Torrent,Vancouver Goldeneyes,Ball Arena
+57,267,8,3,6,58,8018,8,2026-01-28,Montréal Victoire,Toronto Sceptres,Place Bell
+58,268,8,5,8,59,6787,1,2026-01-28,Ottawa Charge,Seattle Torrent,TD Place
+59,269,8,1,4,60,4697,3,2026-01-28,Boston Fleet,New York Sirens,Tsongas Center
+60,270,8,2,9,61,5249,29,2026-01-28,Minnesota Frost,Vancouver Goldeneyes,Grand Casino Arena
+61,271,8,4,3,62,3488,16,2026-02-26,New York Sirens,Montréal Victoire,Prudential Center
+62,272,8,8,6,63,17335,21,2026-02-27,Seattle Torrent,Toronto Sceptres,Climate Pledge Arena
+63,273,8,5,1,64,8572,1,2026-02-28,Ottawa Charge,Boston Fleet,TD Place
+64,274,8,3,2,65,10172,8,2026-03-01,Montréal Victoire,Minnesota Frost,Place Bell
+65,275,8,9,6,66,13264,30,2026-03-01,Vancouver Goldeneyes,Toronto Sceptres,Pacific Coliseum
+66,276,8,6,3,67,8671,17,2026-03-03,Toronto Sceptres,Montréal Victoire,Coca-Cola Coliseum
+67,277,8,5,8,68,6997,1,2026-03-04,Ottawa Charge,Seattle Torrent,TD Place
+68,278,8,4,1,69,3765,16,2026-03-05,New York Sirens,Boston Fleet,Prudential Center
+69,279,8,4,5,70,8264,16,2026-03-08,New York Sirens,Ottawa Charge,Prudential Center
+70,280,8,6,2,71,8604,17,2026-03-08,Toronto Sceptres,Minnesota Frost,Coca-Cola Coliseum
+71,281,8,9,1,72,9731,30,2026-03-10,Vancouver Goldeneyes,Boston Fleet,Pacific Coliseum
+72,282,8,5,3,73,17114,20,2026-04-03,Ottawa Charge,Montréal Victoire,Canadian Tire Centre
+73,283,8,8,1,74,13350,21,2026-03-11,Seattle Torrent,Boston Fleet,Climate Pledge Arena
+74,284,8,2,8,75,11120,29,2026-03-13,Minnesota Frost,Seattle Torrent,Grand Casino Arena
+75,285,8,9,5,76,11201,30,2026-03-14,Vancouver Goldeneyes,Ottawa Charge,Pacific Coliseum
+76,286,8,3,1,77,10172,8,2026-03-15,Montréal Victoire,Boston Fleet,Place Bell
+77,287,8,6,8,78,8270,17,2026-03-15,Toronto Sceptres,Seattle Torrent,Coca-Cola Coliseum
+78,288,8,2,4,79,15512,23,2026-03-15,Minnesota Frost,New York Sirens,Ball Arena
+79,289,8,1,6,80,6095,28,2026-03-17,Boston Fleet,Toronto Sceptres,Agganis Arena
+80,290,8,2,5,81,6673,29,2026-03-18,Minnesota Frost,Ottawa Charge,Grand Casino Arena
+81,291,8,9,4,82,9296,30,2026-03-18,Vancouver Goldeneyes,New York Sirens,Pacific Coliseum
+82,292,8,3,8,83,10033,8,2026-03-19,Montréal Victoire,Seattle Torrent,Place Bell
+83,293,8,9,2,84,10366,30,2026-03-21,Vancouver Goldeneyes,Minnesota Frost,Pacific Coliseum
+84,294,8,1,8,85,6164,3,2026-03-21,Boston Fleet,Seattle Torrent,Tsongas Center
+85,295,8,5,3,86,15225,37,2026-03-22,Ottawa Charge,Montréal Victoire,
+86,296,8,1,9,87,4178,3,2026-03-24,Boston Fleet,Vancouver Goldeneyes,Tsongas Center
+87,297,8,2,3,88,6803,29,2026-03-25,Minnesota Frost,Montréal Victoire,Grand Casino Arena
+88,298,8,8,4,89,10006,33,2026-03-25,Seattle Torrent,New York Sirens,
+89,299,8,6,1,90,8636,17,2026-03-27,Toronto Sceptres,Boston Fleet,Coca-Cola Coliseum
+90,300,8,3,4,91,15938,9,2026-03-28,Montréal Victoire,New York Sirens,
+91,301,8,6,9,92,8631,17,2026-03-29,Toronto Sceptres,Vancouver Goldeneyes,Coca-Cola Coliseum
+92,302,8,2,1,93,9925,29,2026-03-29,Minnesota Frost,Boston Fleet,Grand Casino Arena
+93,303,8,8,5,94,16586,21,2026-03-29,Seattle Torrent,Ottawa Charge,Climate Pledge Arena
+94,304,8,4,2,95,4265,16,2026-04-01,New York Sirens,Minnesota Frost,Prudential Center
+95,305,8,3,9,96,9176,8,2026-04-01,Montréal Victoire,Vancouver Goldeneyes,Place Bell
+96,306,8,5,6,97,16150,38,2026-04-01,Ottawa Charge,Toronto Sceptres,
+97,307,8,2,9,98,8392,29,2026-04-04,Minnesota Frost,Vancouver Goldeneyes,Grand Casino Arena
+98,308,8,4,8,99,18006,40,2026-04-04,New York Sirens,Seattle Torrent,
+99,309,8,3,8,100,9247,8,2026-04-07,Montréal Victoire,Seattle Torrent,Place Bell
+100,310,8,9,1,101,10794,27,2026-04-07,Vancouver Goldeneyes,Boston Fleet,
+101,311,8,5,8,102,6644,1,2026-04-08,Ottawa Charge,Seattle Torrent,TD Place
+102,312,8,2,4,103,9159,29,2026-04-11,Minnesota Frost,New York Sirens,Grand Casino Arena
+103,313,8,6,5,104,8716,17,2026-04-11,Toronto Sceptres,Ottawa Charge,Coca-Cola Coliseum
+104,314,8,1,3,105,17850,39,2026-04-11,Boston Fleet,Montréal Victoire,
+105,315,8,9,8,106,10094,30,2026-04-14,Vancouver Goldeneyes,Seattle Torrent,Pacific Coliseum
+106,316,8,4,6,107,6273,16,2026-04-15,New York Sirens,Toronto Sceptres,Prudential Center
+107,317,8,1,2,108,4170,3,2026-04-15,Boston Fleet,Minnesota Frost,Tsongas Center
+108,318,8,3,1,109,10172,8,2026-04-17,Montréal Victoire,Boston Fleet,Place Bell
+109,319,8,5,4,110,8605,1,2026-04-18,Ottawa Charge,New York Sirens,TD Place
+110,320,8,8,9,111,12719,21,2026-04-18,Seattle Torrent,Vancouver Goldeneyes,Climate Pledge Arena
+111,321,8,2,6,112,8530,29,2026-04-19,Minnesota Frost,Toronto Sceptres,Grand Casino Arena
+112,322,8,6,4,113,8685,17,2026-04-21,Toronto Sceptres,New York Sirens,Coca-Cola Coliseum
+113,323,8,9,3,114,10946,30,2026-04-21,Vancouver Goldeneyes,Montréal Victoire,Pacific Coliseum
+114,324,8,1,5,115,5215,3,2026-04-22,Boston Fleet,Ottawa Charge,Tsongas Center
+115,325,8,8,2,116,11982,21,2026-04-22,Seattle Torrent,Minnesota Frost,Climate Pledge Arena
+116,326,8,8,3,117,17151,21,2026-04-25,Seattle Torrent,Montréal Victoire,Climate Pledge Arena
+117,327,8,9,2,118,11310,30,2026-04-25,Vancouver Goldeneyes,Minnesota Frost,Pacific Coliseum
+118,328,8,5,6,119,8306,1,2026-04-25,Ottawa Charge,Toronto Sceptres,TD Place
+119,329,8,1,4,120,6120,3,2026-04-25,Boston Fleet,New York Sirens,Tsongas Center
+0,338,9,1,5,1,4285,3,2026-04-30,Boston Fleet,Ottawa Charge,Tsongas Center
+1,339,9,1,5,3,6017,3,2026-05-02,Boston Fleet,Ottawa Charge,Tsongas Center
+2,340,9,3,2,2,9364,8,2026-05-02,Montréal Victoire,Minnesota Frost,Place Bell
+3,341,9,3,2,4,7530,8,2026-05-05,Montréal Victoire,Minnesota Frost,Place Bell
+4,342,9,2,3,6,6516,29,2026-05-07,Minnesota Frost,Montréal Victoire,Grand Casino Arena
+5,343,9,5,1,5,13112,20,2026-05-08,Ottawa Charge,Boston Fleet,Canadian Tire Centre
+6,344,9,5,1,7,11297,20,2026-05-10,Ottawa Charge,Boston Fleet,Canadian Tire Centre
+7,345,9,2,3,8,5312,29,2026-05-08,Minnesota Frost,Montréal Victoire,Grand Casino Arena
+8,347,9,3,2,10,6104,8,2026-05-12,Montréal Victoire,Minnesota Frost,Place Bell
+9,348,9,5,3,13,16894,20,2026-05-18,Ottawa Charge,Montréal Victoire,Canadian Tire Centre
+10,349,9,5,3,14,12362,20,2026-05-20,Ottawa Charge,Montréal Victoire,Canadian Tire Centre
+11,350,9,3,5,11,5062,8,2026-05-14,Montréal Victoire,Ottawa Charge,Place Bell
+12,351,9,3,5,12,9232,8,2026-05-16,Montréal Victoire,Ottawa Charge,Place Bell

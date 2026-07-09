@@ -1,9 +1,9 @@
-,location_name,avg_attendance,avg_attendance_whole,capacity
-0,Climate Pledge Arena (Seattle),12875.46154,12875,17151
-1,Coca-Cola Coliseum (Toronto),8379.583333,8380,8140
-2,Grand Casino Arena (Minnesota),8142.846154,8143,18064
-3,Pacific Coliseum (Vancouver),11228.41667,11228,15041
-4,Place Bell (Montréal),9270.583333,9271,10172
-5,Prudential Center (New York),4018.666667,4019,16514
-6,TD Place (Ottawa),7298,7298,8585
-7,Tsongas Center (Boston),4708.857143,4709,6500
+,location_name,capacity
+0,Climate Pledge Arena (Seattle),17151
+1,Coca-Cola Coliseum (Toronto),8140
+2,Grand Casino Arena (Minnesota),18064
+3,Pacific Coliseum (Vancouver),15041
+4,Place Bell (Montréal),10172
+5,Prudential Center (New York),16514
+6,TD Place (Ottawa),8585
+7,Tsongas Center (Boston),6500

@@ -6,9 +6,10 @@
 Graphs can be found in [/graphs](https://github.com/365hockeygirl/pwhl-attendance-data-s3/tree/main/graphs)
 
 <img width="700"  alt="pwhl average attendance vs capacity" src="https://github.com/user-attachments/assets/0111e7cb-97aa-4bbc-82d7-bed283bcd332" />
-<img width="700" alt="tsongas center attendance" src="https://github.com/user-attachments/assets/b472a58f-7181-4aac-bcf2-a1c7008dc2cc" />
-<img width="700" alt="CPA attendance" src="https://github.com/user-attachments/assets/02b5e30b-b1dd-45b9-8cb9-2717131a1512" />
-<img width="700" alt="Prudential Center Attendance" src="https://github.com/user-attachments/assets/32118fad-ee59-4552-95cc-8b86d23995de" />
+<img width="700" alt="Place Bell (2)" src="https://github.com/user-attachments/assets/79eb197e-7f12-440f-8283-e720ff460c9c" />
+<img width="700" alt="Tsongas Center (2)" src="https://github.com/user-attachments/assets/832e87d3-6d72-47a7-bbe3-0fc7d50f1ffa" />
+<img width="700" alt="Climate Pledge Arena (2)" src="https://github.com/user-attachments/assets/d4fd225f-e3ea-4f02-b385-3587364dc676" />
+
 
 ## Dataset Generation 💻
 PWHL Season 3 Attendance data generated via HockeyTech/LeagueStat API (lscluster.hockeytech.com)

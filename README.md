@@ -37,10 +37,10 @@ The Jupyter notebook used to fetch the data is in [/code_to_fetch_data](code_to_
 
 ## Dataset
 The data generated from the notebook is in [/data](data)
-- 📁 S3 Regular season attendance: lists attendances for every regular season game. Also contains separate datasets for just primary venues vs "special" venues (takeover games, one-off games)
-- 📁 S3 regular season average attendances: Average attendances based on home team or primary venue
-- 📁 S3 Playoffs attendances: lists attendances for playoffs, also gives a combined dataset for all games including regular season and playoffs
-- 📁 arena characteristics: arena capacities, walk score
+- 📁 [S3 Regular season attendance](S3%20regular%20season%20attendance): lists attendances for every regular season game. Also contains separate datasets for just primary venues vs "special" venues (takeover games, one-off games)
+- 📁 [S3 regular season average attendances](S3%20regular%20season%20average%20attendances): Average attendances based on home team or primary venue
+- 📁 [S3 Playoffs attendances](S3%20Playoffs%20attendances): lists attendances for playoffs, also gives a combined dataset for all games including regular season and playoffs
+- 📁 [arena characteristics](arena%20characteristics): arena capacities, walk score
 
 ## Join my livestream with Maddy WNBA data!
 <img width="800" alt="Livestream thumbnails" src="https://github.com/user-attachments/assets/ec6a8043-f67c-4e5a-9eb7-29d456453864" />

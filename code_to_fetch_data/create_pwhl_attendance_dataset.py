@@ -135,12 +135,6 @@ len(s3_regular_and_playoffs_attendance_data)
 
 s3_regular_and_playoffs_attendance_data.to_csv("s3_regular_and_playoffs_attendance_data.csv")
 
-"""# Test - CTC"""
-
-ctc_game = s3_regular_season_attendance_data[s3_regular_season_attendance_data["id"] == 282]
-
-ctc_game
-
 """# Season 3 Regular Season Average Attendance By Venue And Home Team"""
 
 average_attendance_by_location = s3_regular_season_primary_venue_attendance_data.groupby('location_name')['attendance'].mean().reset_index()
@@ -153,19 +147,37 @@ average_attendance_by_location.to_csv("primary_venue_average_attendance_by_locat
 
 average_attendance_by_team.to_csv("average_attendance_by_home_team.csv")
 
+"""# Import Arena Capacity Data From GDrive"""
+
+from google.colab import drive
+drive.mount('/content/drive')
+
+# s3_arena_capacities_df = pd.read_csv("s3_arena_capacities.csv")
+s3_arena_capacities_df = pd.read_csv('/content/drive/My Drive/arena characteristics/s3_arena_capacities.csv')
+
+s3_arena_capacities_df.head()
+
+all_arena_capacities_df = pd.read_csv('/content/drive/My Drive/arena characteristics/all_arena_capacities.csv')
+all_arena_capacities_df.head()
+
+s4_arena_capacities_df = pd.read_csv('/content/drive/My Drive/arena characteristics/s4_arena_capacities.csv')
+
+s4_arena_capacities_df.head()
+
+s1_arena_capacities_df = pd.read_csv('/content/drive/My Drive/arena characteristics/s1_arena_capacities.csv')
+
+s1_arena_capacities_df.head()
+
 """## Season 3 Regular Season Average Attendance By Venue Vs Capacity
 
 """
 
-s3_arena_capacities_df = pd.read_csv("s3_arena_capacities.csv")
-s3_arena_capacities_df.head()
-
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def plot_arena_average_attendance_vs_capacity(average_attendance_by_location_df, s3_arena_capacities_df, color=None):
+def plot_arena_average_attendance_vs_capacity(average_attendance_by_location_df, arena_capacities_df, color=None):
     # Merge average attendance with arena capacities and city names
-    merged_df_with_city = pd.merge(average_attendance_by_location_df, s3_arena_capacities_df[['location_name', 'capacity', 'city']], on='location_name', how='left')
+    merged_df_with_city = pd.merge(average_attendance_by_location_df, arena_capacities_df[['location_name', 'capacity', 'city']], on='location_name', how='left')
 
     # Create a combined label for location and city
     merged_df_with_city['display_label'] = merged_df_with_city.apply(lambda row: f"{row['location_name']} ({row['city']})", axis=1)
@@ -235,7 +247,7 @@ df_filtered
 
 import matplotlib.pyplot as plt
 
-def plot_arena_attendance_vs_capacity(arena_name, s3_regular_season_primary_venue_attendance_data, s3_arena_capacities_df, colors=None):
+def plot_arena_attendance_vs_capacity(arena_name, s3_regular_season_primary_venue_attendance_data, arena_capacities_df, colors=None, show_playoff_shading=False):
 
     weekday_color = colors[0] if colors is not None else 'skyblue'
     weekend_color = colors[1] if colors is not None else 'lightcoral'
@@ -244,7 +256,8 @@ def plot_arena_attendance_vs_capacity(arena_name, s3_regular_season_primary_venu
 
     if arena_games_df.empty:
         print(f"No data found for {arena_name}.")
-        return
+        # Return None for fig, ax, and legend_handles if no data
+        return None, None, []
 
     # Convert 'date_played' to datetime objects to get day of the week
     arena_games_df['date_played_dt'] = pd.to_datetime(arena_games_df['date_played'])
@@ -253,52 +266,61 @@ def plot_arena_attendance_vs_capacity(arena_name, s3_regular_season_primary_venu
     arena_games_df_sorted = arena_games_df.sort_values(by='attendance', ascending=False)
 
     # Get arena capacity
-    arena_capacity = s3_arena_capacities_df[s3_arena_capacities_df['location_name'] == arena_name]['capacity'].iloc[0]
+    arena_capacity = arena_capacities_df[arena_capacities_df['location_name'] == arena_name]['capacity'].iloc[0]
 
     # Create a list of game labels for the x-axis using date_played and day of week
     game_labels = [f"{dt.strftime('%Y-%m-%d')} ({dt.strftime('%a')})" for dt in arena_games_df_sorted['date_played_dt']]
 
     # Determine colors based on weekday/weekend (Friday now included in weekend)
     # Monday=0, Sunday=6. Fri=4. So, dayofweek >= 4 includes Friday, Saturday, Sunday.
-    colors = [weekend_color if day_dt.dayofweek >= 4 else weekday_color for day_dt in arena_games_df_sorted['date_played_dt']]
+    bar_colors = [weekend_color if day_dt.dayofweek >= 4 else weekday_color for day_dt in arena_games_df_sorted['date_played_dt']]
 
-    fig = plt.figure(figsize=(12, 7))
+    # Determine hatch patterns for playoff games (season_id == 9) only if show_playoff_shading is True
+    hatch_patterns = ['///' if sid == 9 else None for sid in arena_games_df_sorted['season_id']] if show_playoff_shading else [None] * len(arena_games_df_sorted)
+
+    fig, ax = plt.subplots(figsize=(12, 7))
 
     # Plot capacity bars first (as background)
-    plt.bar(
+    # Removed 'label' from here to prevent implicit legend creation
+    ax.bar(
         game_labels,
         [arena_capacity] * len(arena_games_df_sorted),
         color='lightgray',
-        label=f'{arena_name} Capacity'
+        zorder=1 # Ensure capacity bars are behind
     )
 
-    # Plot attendance bars on top with conditional coloring
-    attendance_bars = plt.bar(
+    # Plot attendance bars on top with conditional coloring and hatching
+    attendance_bars = ax.bar(
         game_labels,
         arena_games_df_sorted['attendance'],
-        color=colors,
-        label='Game Attendance (Weekday/Weekend)'
+        color=bar_colors,
+        hatch=hatch_patterns,
+        zorder=2 # Ensure attendance bars are in front
     )
 
     # Add attendance numbers on top of the bars
     for bar in attendance_bars:
         yval = bar.get_height()
-        plt.text(bar.get_x() + bar.get_width()/2, yval + 50, int(yval), ha='center', va='bottom', fontsize=10)
+        ax.text(bar.get_x() + bar.get_width()/2, yval + 50, int(yval), ha='center', va='bottom', fontsize=10)
 
-    plt.xlabel('Date Played (Day of Week)', fontsize=16)
-    plt.ylabel('Attendance / Capacity', fontsize=16)
-    plt.title(f'{arena_name} Game Attendance vs. Capacity', fontsize=16)
-    plt.xticks(rotation=45, ha='right', fontsize=12)
-    plt.yticks(fontsize=12)
+    ax.set_xlabel('Date Played (Day of Week)', fontsize=16)
+    ax.set_ylabel('Attendance / Capacity', fontsize=16)
+    ax.set_title(f'{arena_name} Game Attendance vs. Capacity', fontsize=16)
+    ax.set_xticks(range(len(arena_games_df_sorted)))
+    ax.set_xticklabels(game_labels, rotation=45, ha='right', fontsize=12)
+    ax.tick_params(axis='y', labelsize=12)
 
-    # Create custom legend handles for weekday/weekend
+    # Create custom legend handles for weekday/weekend and playoff games
+    capacity_patch = plt.matplotlib.patches.Patch(color='lightgray', label=f'{arena_name} Capacity')
     weekday_patch = plt.matplotlib.patches.Patch(color=weekday_color, label='Weekday Attendance')
     weekend_patch = plt.matplotlib.patches.Patch(color=weekend_color, label='Weekend Attendance (incl. Friday)')
-    capacity_patch = plt.matplotlib.patches.Patch(color='lightgray', label=f'{arena_name} Capacity')
-    plt.legend(handles=[capacity_patch, weekday_patch, weekend_patch], fontsize=12)
 
-    plt.tight_layout()
-    return fig
+    legend_handles = [capacity_patch, weekday_patch, weekend_patch]
+    if show_playoff_shading:
+        playoff_patch = plt.matplotlib.patches.Patch(facecolor='gray', hatch='///', label='Playoff Game') # New patch for playoff games
+        legend_handles.append(playoff_patch)
+
+    return fig, ax, legend_handles
 
 """# Plot and Save Graphs"""
 
@@ -321,10 +343,213 @@ location_name_color_map = {
     "Tsongas Center": ("MediumTurquoise", "DarkGreen"),
     "Place Bell": ("Navy","DarkRed"),
     "Coca-Cola Coliseum": ("Gold", "RoyalBlue"),
-    "Prudential Center": ("LightSeaGreen", "orange"),
+    "Prudential Center": ("orange", "LightSeaGreen"),
     "Climate Pledge Arena": ("MediumTurquoise", "Teal"),
+    "Canadian Tire Centre": ("Gold", "Red"),
+    "Agganis Arena": ("MediumTurquoise", "DarkGreen"),
+    "Little Caesars Arena": ("red", "red"),
+    "SAP Center": ("DodgerBlue", "DodgerBlue"),
+    "T-Mobile Arena": ("OliveDrab", "OliveDrab"),
+    "TD Coliseum": ("Gold", "Gold"),
 }
 
 for arena_name in primary_location_name_map.values():
-    fig = plot_arena_attendance_vs_capacity(arena_name, s3_regular_season_primary_venue_attendance_data, s3_arena_capacities_df, location_name_color_map[arena_name])
+    fig, _, _ = plot_arena_attendance_vs_capacity(arena_name, s3_regular_season_primary_venue_attendance_data, all_arena_capacities_df, location_name_color_map[arena_name], show_playoff_shading=False)
     fig.savefig('graphs/'+arena_name+'.png', dpi=300, bbox_inches='tight')
+
+"""## Canadian Tire Centre"""
+
+ctc_games = s3_regular_and_playoffs_attendance_data[s3_regular_and_playoffs_attendance_data["location_name"] == "Canadian Tire Centre"]
+
+ctc_games
+
+ctc_games['attendance'].mean()
+
+fig,_,_= plot_arena_attendance_vs_capacity("Canadian Tire Centre", ctc_games, all_arena_capacities_df, location_name_color_map["Canadian Tire Centre"], show_playoff_shading=True)
+
+fig.savefig('graphs/Canadian Tire Centre.png', dpi=300, bbox_inches='tight')
+
+"""## Agganis Arena"""
+
+agganis_games = s3_regular_season_attendance_data[s3_regular_season_attendance_data["location_name"] == "Agganis Arena"]
+
+agganis_games
+
+agganis_games['attendance'].mean()
+
+fig,_,_ = plot_arena_attendance_vs_capacity("Agganis Arena", agganis_games, all_arena_capacities_df, location_name_color_map["Agganis Arena"], show_playoff_shading=False)
+
+fig.savefig('graphs/Agganis Arena.png', dpi=300, bbox_inches='tight')
+
+"""## Arena Capacities
+
+"""
+
+s4_arena_capacities_df
+
+s4_arena_capacities_df.iloc[5]["is_expansion_team"]
+
+import matplotlib.pyplot as plt
+
+def plot_capacities(capacities_df, title='Primary Venue Capacities 2025-2026', show_expansion_teams=False):
+    # Prepare data for plotting
+    capacity_df = capacities_df.copy()
+
+    # Map colors based on the second color in the tuple from location_name_color_map
+    capacity_df['color'] = capacity_df['location_name'].map(lambda x: location_name_color_map.get(x, ('gray', 'lightgray'))[1])
+
+    # Create a combined label for location and city
+    capacity_df['display_label'] = capacity_df.apply(lambda row: f"{row['location_name']} ({row['city']})", axis=1)
+
+    # Sort by capacity for better visualization
+    capacity_df_sorted = capacity_df.sort_values(by='capacity', ascending=False)
+
+    # Determine hatch patterns based on show_expansion_teams and 'is_expansion_team' column
+    hatch_patterns = [None] * len(capacity_df_sorted)
+    if show_expansion_teams and 'is_expansion_team' in capacity_df_sorted.columns:
+        hatch_patterns = ['///' if row['is_expansion_team'] else None for _, row in capacity_df_sorted.iterrows()]
+
+    fig, ax = plt.subplots(figsize=(12, 7))
+
+    bars = ax.bar(
+        capacity_df_sorted['display_label'],
+        capacity_df_sorted['capacity'],
+        color=capacity_df_sorted['color'],
+        hatch=hatch_patterns
+    )
+
+    # Add capacity numbers on top of the bars
+    for bar in bars:
+        yval = bar.get_height()
+        ax.text(
+            bar.get_x() + bar.get_width()/2,
+            yval + 50,
+            int(yval),
+            ha='center',
+            va='bottom',
+            fontsize=10
+        )
+
+    ax.set_xlabel('Arena Location (City)', fontsize=16)
+    ax.set_ylabel('Capacity', fontsize=16)
+    ax.set_title(title, fontsize=16)
+    ax.set_xticks(range(len(capacity_df_sorted['display_label'])))
+    ax.set_xticklabels(capacity_df_sorted['display_label'], rotation=45, ha='right', fontsize=12)
+    ax.tick_params(axis='y', labelsize=12)
+
+    # Add legend for expansion teams if applicable
+    legend_elements = []
+    if show_expansion_teams and 'is_expansion_team' in capacity_df_sorted.columns:
+        if any(capacity_df_sorted['is_expansion_team']):
+            expansion_patch = plt.matplotlib.patches.Patch(facecolor='grey', hatch='///', label='Expansion Team')
+            legend_elements.append(expansion_patch)
+
+    if legend_elements:
+        ax.legend(handles=legend_elements, fontsize=12, loc='upper left')
+
+    plt.tight_layout()
+    # Removed plt.show() from here
+    return fig
+
+fig = plot_capacities(s3_arena_capacities_df)
+
+fig.savefig('graphs/Primary Venue Capacities 2025-2026.png', dpi=300, bbox_inches='tight')
+
+fig = plot_capacities(s4_arena_capacities_df, title='Primary Venue Capacities 2026-2027', show_expansion_teams=True)
+
+fig.savefig('graphs/Primary Venue Capacities 2026-2027.png', dpi=300, bbox_inches='tight')
+
+fig = plot_capacities(s1_arena_capacities_df, title='Primary Venue Capacities 2024', show_expansion_teams=False)
+
+fig.savefig('graphs/Primary Venue Capacities 2024.png', dpi=300, bbox_inches='tight')
+
+"""# Ottawa Charge Lansdowne 2.0
+
+The arena, run by the Ottawa Sports and Entertainment Group (OSEG), is in its final years and a new arena with a seating capacity of 5,850, which can be expanded to more than 6,600 is currently under construction.
+
+https://www.sportsnet.ca/pwhl/article/ottawa-charge-shifts-home-arena-to-canadian-tire-centre-home-of-senators/
+"""
+
+arena_name = "TD Place"
+fig, ax, base_legend_patches = plot_arena_attendance_vs_capacity(arena_name, s3_regular_season_primary_venue_attendance_data, all_arena_capacities_df, location_name_color_map[arena_name], show_playoff_shading=False)
+
+# Add the horizontal line for visualization only, without a label
+ax.axhline(y=6600, color='purple', linestyle='--')
+
+# Manually create a Line2D object for the Lansdowne 2.0 Capacity legend entry
+from matplotlib.lines import Line2D
+lansdowne_legend_line = Line2D([0], [0], color='purple', linestyle='--', label='Lansdowne 2.0 Capacity (6600)')
+
+# Combine the base legend patches with the new manual line handle in the desired order
+# base_legend_patches already contains: [TD Place Capacity, Weekday Attendance, Weekend Attendance (incl. Friday)]
+combined_handles = base_legend_patches + [lansdowne_legend_line]
+
+# Get labels from all handles to ensure correct display
+combined_labels = [h.get_label() for h in combined_handles]
+
+# Create the legend with all combined handles and labels
+ax.legend(handles=combined_handles, labels=combined_labels, fontsize=12)
+
+# Ensure tight layout
+fig.tight_layout()
+
+fig.savefig('graphs/Lansdowne 2.0.png', dpi=300, bbox_inches='tight')
+
+td_place_games = s3_regular_season_attendance_data[s3_regular_season_attendance_data["location_name"] == arena_name]
+
+len(td_place_games)
+
+td_place_games['attendance'].mean()
+
+"""# Walk Score"""
+
+s4_walk_score_df = pd.read_csv('/content/drive/My Drive/arena characteristics/s4_arena_walk_score.csv')
+
+s4_walk_score_df.head()
+
+import matplotlib.pyplot as plt
+
+def plot_walk_score(walk_score_df, title='Arena Walk Score'):
+    # Prepare data for plotting
+    df = walk_score_df.copy()
+
+    # Map colors based on the second color in the tuple from location_name_color_map
+    df['color'] = df['location_name'].map(lambda x: location_name_color_map.get(x, ('gray', 'lightgray'))[1])
+
+    # Create a combined label for location and city
+    df['display_label'] = df.apply(lambda row: f"{row['location_name']} ({row['city']})", axis=1)
+
+    # Sort by walk_score for better visualization
+    df_sorted = df.sort_values(by='walk_score', ascending=False)
+
+    fig, ax = plt.subplots(figsize=(12, 7))
+
+    bars = ax.bar(
+        df_sorted['display_label'],
+        df_sorted['walk_score'],
+        color=df_sorted['color']
+    )
+
+    # Add walk score numbers on top of the bars
+    for bar in bars:
+        yval = bar.get_height()
+        ax.text(
+            bar.get_x() + bar.get_width()/2,
+            yval + 1, # Adjusted offset for walk scores
+            int(yval),
+            ha='center',
+            va='bottom',
+            fontsize=10
+        )
+
+    ax.set_xlabel('Arena Location (City)', fontsize=16)
+    ax.set_ylabel('Walk Score', fontsize=16)
+    ax.set_title(title, fontsize=16)
+    ax.set_xticks(range(len(df_sorted['display_label'])))
+    ax.set_xticklabels(df_sorted['display_label'], rotation=45, ha='right', fontsize=12)
+    ax.tick_params(axis='y', labelsize=12)
+
+    plt.tight_layout()
+    return fig
+
+fig = plot_walk_score(s4_walk_score_df)

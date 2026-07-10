@@ -6,6 +6,7 @@
 - [Graphs](#graphs-)
 - [Dataset Generation](#dataset-generation-)
 - [Dataset](#dataset)
+- [✨Livestream with Maddy wnbadata!✨](join-my-livestream-with-maddy-wnba-data)
 
 ## Graphs 📊
 Graphs can be found in [/graphs](https://github.com/365hockeygirl/pwhl-attendance-data-s3/tree/main/graphs)

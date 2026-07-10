@@ -5,10 +5,21 @@
 ## Graphs 📊
 Graphs can be found in [/graphs](https://github.com/365hockeygirl/pwhl-attendance-data-s3/tree/main/graphs)
 
-<img width="700"  alt="pwhl average attendance vs capacity" src="https://github.com/user-attachments/assets/0111e7cb-97aa-4bbc-82d7-bed283bcd332" />
-<img width="700" alt="Lansdowne 2 0" src="https://github.com/user-attachments/assets/771c54ce-8bd2-4da9-9b27-3ebbd85ccca4" />
-<img width="700" alt="Agganis Arena" src="https://github.com/user-attachments/assets/6ee7fac8-0a50-4c7e-83b9-0bc186ec8184" />
-<img width="700" alt="Tsongas Center" src="https://github.com/user-attachments/assets/6fa38c20-9628-4a70-b73e-3c75a712f0c5" />
+<img width="600"  alt="pwhl average attendance vs capacity" src="https://github.com/user-attachments/assets/0111e7cb-97aa-4bbc-82d7-bed283bcd332" />
+<br>
+
+### Ottawa Charge move from TD Place to Canadian Tire Centre:
+<img width="600" alt="Lansdowne 2 0" src="https://github.com/user-attachments/assets/771c54ce-8bd2-4da9-9b27-3ebbd85ccca4" />
+<br>
+<img width="400" alt="TD Place" src="https://github.com/user-attachments/assets/f1b323e6-8ed6-43e0-9fd3-d11aac670e2b" />
+<img width="400" alt="Canadian Tire Centre" src="https://github.com/user-attachments/assets/7960cded-a44c-4d49-967a-c541bff74608" />
+
+
+<br>
+
+### Boston Fleet move from Tsongas Center to Agganis Arena:
+<img width="400" alt="Tsongas Center" src="https://github.com/user-attachments/assets/6fa38c20-9628-4a70-b73e-3c75a712f0c5" />
+<img width="400" alt="Agganis Arena" src="https://github.com/user-attachments/assets/6ee7fac8-0a50-4c7e-83b9-0bc186ec8184" />
 
 
 

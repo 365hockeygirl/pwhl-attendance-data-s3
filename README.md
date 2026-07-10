@@ -25,6 +25,8 @@ Graphs can be found in [/graphs](graphs)
 
 ### Boston Fleet move from Tsongas Center to Agganis Arena:
 <img width="600" alt="boston_regular_season_all_venues" src="https://github.com/user-attachments/assets/8e4946b1-ab09-4bed-bfc3-ba7402debe6a" />
+<br>
+
 <img width="400" alt="Tsongas Center" src="https://github.com/user-attachments/assets/6fa38c20-9628-4a70-b73e-3c75a712f0c5" />
 <img width="400" alt="Agganis Arena" src="https://github.com/user-attachments/assets/6ee7fac8-0a50-4c7e-83b9-0bc186ec8184" />
 

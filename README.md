@@ -1,6 +1,6 @@
 # PWHL Attendance Data Season 3
 
-✨ SUBSCRIBE TO [365 HOCKEY GIRL NEWSLETTER](https://365hockeygirl.beehiiv.com/subscribe) TO READ THE WRITE UP! ✨
+✨ SUBSCRIBE TO THE [365 HOCKEY GIRL NEWSLETTER](https://365hockeygirl.beehiiv.com/subscribe) TO READ THE WRITE UP! ✨
 
 ## Table of Contents
 - [Graphs](#graphs-)
@@ -46,5 +46,7 @@ The data generated from the notebook is in [/data](data)
 <img width="800" alt="Livestream thumbnails" src="https://github.com/user-attachments/assets/ec6a8043-f67c-4e5a-9eb7-29d456453864" />
 
 Join us for a livestream of Atlanta Dream vs the Seattle Storm on Friday, July 31 at 4:30PM PST / 7:30PM EST!
+
+
 [✨LINK TO LIVESTREAM!✨](https://365hockeygirl.beehiiv.com/p/july-livestream-link-wnba-watch-along-with-maddy-wnbadata)
 

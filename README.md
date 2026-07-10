@@ -2,6 +2,11 @@
 
 ✨ SUBSCRIBE TO [365 HOCKEY GIRL NEWSLETTER](https://365hockeygirl.beehiiv.com/subscribe) TO READ THE WRITE UP! ✨
 
+## Table of Contents
+- [Graphs](#graphs-)
+- [Dataset Generation](#dataset-generation-)
+- [Dataset](#dataset)
+
 ## Graphs 📊
 Graphs can be found in [/graphs](https://github.com/365hockeygirl/pwhl-attendance-data-s3/tree/main/graphs)
 

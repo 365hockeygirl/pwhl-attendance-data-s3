@@ -2,13 +2,30 @@
 
 ✨ SUBSCRIBE TO [365 HOCKEY GIRL NEWSLETTER](https://365hockeygirl.beehiiv.com/subscribe) TO READ THE WRITE UP! ✨
 
+## Table of Contents
+- [Graphs](#graphs-)
+- [Dataset Generation](#dataset-generation-)
+- [Dataset](#dataset)
+
 ## Graphs 📊
 Graphs can be found in [/graphs](https://github.com/365hockeygirl/pwhl-attendance-data-s3/tree/main/graphs)
 
-<img width="700"  alt="pwhl average attendance vs capacity" src="https://github.com/user-attachments/assets/0111e7cb-97aa-4bbc-82d7-bed283bcd332" />
-<img width="700" alt="Place Bell (2)" src="https://github.com/user-attachments/assets/79eb197e-7f12-440f-8283-e720ff460c9c" />
-<img width="700" alt="Tsongas Center (2)" src="https://github.com/user-attachments/assets/832e87d3-6d72-47a7-bbe3-0fc7d50f1ffa" />
-<img width="700" alt="Climate Pledge Arena (2)" src="https://github.com/user-attachments/assets/d4fd225f-e3ea-4f02-b385-3587364dc676" />
+<img width="600"  alt="pwhl average attendance vs capacity" src="https://github.com/user-attachments/assets/0111e7cb-97aa-4bbc-82d7-bed283bcd332" />
+<br>
+
+### Ottawa Charge move from TD Place to Canadian Tire Centre:
+<img width="600" alt="Lansdowne 2 0" src="https://github.com/user-attachments/assets/771c54ce-8bd2-4da9-9b27-3ebbd85ccca4" />
+<br>
+<img width="400" alt="TD Place" src="https://github.com/user-attachments/assets/f1b323e6-8ed6-43e0-9fd3-d11aac670e2b" />
+<img width="400" alt="Canadian Tire Centre" src="https://github.com/user-attachments/assets/7960cded-a44c-4d49-967a-c541bff74608" />
+
+
+<br>
+
+### Boston Fleet move from Tsongas Center to Agganis Arena:
+<img width="400" alt="Tsongas Center" src="https://github.com/user-attachments/assets/6fa38c20-9628-4a70-b73e-3c75a712f0c5" />
+<img width="400" alt="Agganis Arena" src="https://github.com/user-attachments/assets/6ee7fac8-0a50-4c7e-83b9-0bc186ec8184" />
+
 
 
 ## Dataset Generation 💻

@@ -6,10 +6,10 @@
 - [Graphs](#graphs-)
 - [Dataset Generation](#dataset-generation-)
 - [Dataset](#dataset)
-- [✨Livestream with Maddy wnbadata!✨](join-my-livestream-with-maddy-wnba-data)
+- [✨Livestream with Maddy wnbadata!✨](#join-my-livestream-with-maddy-wnba-data)
 
 ## Graphs 📊
-Graphs can be found in [/graphs](https://github.com/365hockeygirl/pwhl-attendance-data-s3/tree/main/graphs)
+Graphs can be found in [/graphs](graphs)
 
 <img width="600"  alt="pwhl average attendance vs capacity" src="https://github.com/user-attachments/assets/0111e7cb-97aa-4bbc-82d7-bed283bcd332" />
 <br>
@@ -33,10 +33,10 @@ Graphs can be found in [/graphs](https://github.com/365hockeygirl/pwhl-attendanc
 PWHL Season 3 Attendance data generated via HockeyTech/LeagueStat API (lscluster.hockeytech.com)
 See PWHL data reference: https://github.com/IsabelleLefebvre97/PWHL-Data-Reference
 
-The Jupyter notebook used to fetch the data is in [/code_to_fetch_data](https://github.com/365hockeygirl/pwhl-attendance-data-s3/tree/main/code_to_fetch_data) 
+The Jupyter notebook used to fetch the data is in [/code_to_fetch_data](code_to_fetch_data) 
 
 ## Dataset
-The data generated from the notebook is in [/data](https://github.com/365hockeygirl/pwhl-attendance-data-s3/tree/main/data)
+The data generated from the notebook is in [/data](data)
 - 📁 S3 Regular season attendance: lists attendances for every regular season game. Also contains separate datasets for just primary venues vs "special" venues (takeover games, one-off games)
 - 📁 S3 regular season average attendances: Average attendances based on home team or primary venue
 - 📁 S3 Playoffs attendances: lists attendances for playoffs, also gives a combined dataset for all games including regular season and playoffs
